@@ -1,0 +1,2 @@
+# youwillwinthefuture
+Novel website
