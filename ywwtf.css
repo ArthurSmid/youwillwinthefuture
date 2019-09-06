@@ -169,7 +169,7 @@ body {
 .screen-wipe {
 	height: 100vh;
 	width: 100vw;
-	background: linear-gradient(90deg, #FFF200, #DA36E2);
+	background: linear-gradient(to right, rgba(255, 0, 0, 0) 0%,#f72d00 62%,#0089f9 82%,#10f700 91%,#fcef00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	z-index: 3;
 	position: fixed;
 	transform: translateX(-100vw);
@@ -179,20 +179,33 @@ body {
 	animation: screen-wipeAnimation 8s linear;
 }
 @keyframes screen-wipeAnimation {
-	0%{opacity: 1; transform: translateX(-100vw);}
-	50%{opacity: 0; transform: translateX(0vw);}
-	100%{opacity: 0; transform: translateX(100vw);}
+	0%{transform: translateX(-100vw);}
+	50%{transform: translateX(0vw);}
+	100%{transform: translateX(100vw);}
 }
-
+/* container was used to enclose the title and all contents on the index page of my name site.
+   Currently, container isn't being used as a class on any of the HTML for this site.
+*/
 .container {
-  margin: 0 auto;
+	margin: 0 auto;
   text-align: center;
   position: relative;
   right: 18px;
   padding-bottom: 60px;
-	padding: 0;
-	font-family: Arial, sans-serif;
-	height: 100vh;
-	line-height: 1.1;
-	background-size: 400%;
+}
+
+#book-title h4{
+	color: #000;
+	font-size: 8vw;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: .75px;
+	text-align: left;
+	display: inline-block;
+	padding-left: 54px;
+	padding-top: 54px;
+}
+#book-title h4 span{
+	display: block;
+	text-align: right;
 }
